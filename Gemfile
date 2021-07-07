@@ -28,6 +28,7 @@ group :development, :test do
   gem 'byebug', '~> 11.1', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug', '~> 3.9'
   gem 'pry-rails'
+  gem 'rubocop', '~> 1.17', require: false
 end
 
 group :development do
