@@ -19,7 +19,11 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= Rails.application.credentials.dig(:db_pool) || ENV['DB_POOL'] || ENV['RAILS_MAX_THREADS'] || 5 %>
+  host: 127.0.0.1
+  port: 5432
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
 
 development:
   <<: *default
