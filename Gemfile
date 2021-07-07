@@ -43,6 +43,7 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'solargraph'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
